@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>bamazondb</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>-2248834647132950651</string>
+			<key>name</key>
+			<string>localhost</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeAClJpZNIeHy0uXxAPTlNN
+			dXRhYmxlU3RyaW5noy0vI1hOU1N0cmluZ9IeHzEyXk5TTXV0YWJs
+			ZUFycmF5ozEzI1dOU0FycmF50h4fIjWiIiNfEA9OU0tleWVkQXJj
+			aGl2ZXLRODlUZGF0YYABAAgAEQAaACMALQAyADcARQBLAFIAWgBl
+			AGwAcAByAHQAdgB6AHwAfgCAAIIAhwCMAJEAugDBAMIAwwDFAMoA
+			1QDeAPQA+AEFAQ4BEwEVARcBGQEeASgBKgEtATIBRAFIAVEBVgFl
+			AWkBcQF2AXkBiwGOAZMAAAAAAAACAQAAAAAAAAA6AAAAAAAAAAAA
+			AAAAAAABlQ==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{1, 0}, {585, 656}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>DROP DATABASE IF EXISTS bamazonDB;
+
+CREATE DATABASE bamazonDB;
+
+USE bamazonDB;
+
+CREATE TABLE products (
+  id INT NOT NULL AUTO_INCREMENT,
+  product_name VARCHAR(45) NOT NULL,
+  department_name VARCHAR(45),
+  price DECIMAL(10,2) NULL,
+  quantity INT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO products (product_name, department_name, price, quantity)
+VALUES ("Hoe", "Gardening", 25.00, 50),
+	("Hedge Clippers", "Gardening", 10.50, 100), 
+	("Rake", "Gardening", 25.00, 50),
+	("Trowel", "Gardening", 5.00, 100),
+	("Shovel", "Gardening", 25.00, 50),
+	("Hammer", "Tools", 20.00, 100),
+	("Flat-Head Screwdriver", "Tools", 2.50, 100),
+	("Phillips-head Screwdriver", "Tools", 2.75, 100),
+	("Pliers", "Tools", 3.00, 100),
+	("Wire-Cutters", "Tools", 10.00, 100);
+
+
+</string>
+			<key>table</key>
+			<string>products</string>
+			<key>view</key>
+			<string>SP_VIEW_CONTENT</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>INSERT INTO products (product_name, department_name, price, quantity)
+VALUES ("Hoe", "Gardening", 25.00, 50),
+	("Hedge Clippers", "Gardening", 10.50, 100), 
+	("Rake", "Gardening", 25.00, 50),
+	("Trowel", "Gardening", 5.00, 100),
+	("Shovel", "Gardening", 25.00, 50),
+	("Hammer", "Tools", 20.00, 100),
+	("Flat-Head Screwdriver", "Tools", 2.50, 100),
+	("Phillips-head Screwdriver", "Tools", 2.75, 100),
+	("Pliers", "Tools", 3.00, 100),
+	("Wire-Cutters", "Tools", 10.00, 100)</string>
+		<string>DROP DATABASE IF EXISTS bamazonDB;
+CREATE DATABASE bamazonDB;
+USE bamazonDB;
+CREATE TABLE products (
+  id INT NOT NULL AUTO_INCREMENT,
+  product_name VARCHAR(45) NOT NULL,
+  department_name VARCHAR(45),
+  price DECIMAL(10,2) NULL,
+  quantity INT NULL,
+  PRIMARY KEY (id)
+)</string>
+		<string>}</string>
+		<string>DROP DATABASE IF EXISTS musicDB;
+CREATE DATABASE musicDB;
+USE musicDB;
+CREATE TABLE playlist (
+  id INT NOT NULL AUTO_INCREMENT,
+  title VARCHAR(45) NULL,
+  artist VARCHAR(45) NULL,
+  genre VARCHAR(45) NULL,
+  PRIMARY KEY (id)
+);
+INSERT INTO playlist (title, artist, genre)
+VALUES ("Banana Pancakes", "Jack Jonhson", "Folk"),
+    ("Eagles", "Hotel California", "Classic Rock"),
+    ("Blink 182", "All the Small Things", "Punk")</string>
+		<string>INSERT INTO playlist (title, artist, genre)
+VALUES ("Banana Pancakes", "Jack Jonhson", "Folk"),
+    ("Eagles", "Hotel California", "Classic Rock"),
+    ("Blink 182", "All the Small Things", "Punk")</string>
+		<string>DROP DATABASE IF EXISTS musicDB;
+CREATE DATABASE musicDB;
+USE musicDB;
+CREATE TABLE playlists (
+  id INT NOT NULL AUTO_INCREMENT,
+  title VARCHAR(45) NULL,
+  artist VARCHAR(45) NULL,
+  genre VARCHAR(45) NULL,
+  PRIMARY KEY (id)
+);
+INSERT INTO playlist (title, artist, genre)
+VALUES ("Banana Pancakes", "Jack Jonhson", "Folk"),
+    ("Eagles", "Hotel California", "Classic Rock"),
+    ("Blink 182", "All the Small Things", "Punk")</string>
+		<string>DROP DATABASE IF EXISTS musicDB;
+CREATE DATABASE musicDB;
+USE musicDB;
+CREATE TABLE playlists (
+  id INT NOT NULL AUTO_INCREMENT,
+  title VARCHAR(45) NULL,
+  artist VARCHAR(45) NULL,
+  genre VARCHAR(45) NULL,
+  PRIMARY KEY (id)
+);
+INSERT INTO playlist (title, artist, genre)</string>
+		<string>DROP DATABASE IF EXISTS ice_creamDB;
+CREATE DATABASE ice_creamDB;
+USE ice_creamDB;
+CREATE TABLE products (
+  id INT NOT NULL AUTO_INCREMENT,
+  flavor VARCHAR(45) NULL,
+  price DECIMAL(10,2) NULL,
+  quantity INT NULL,
+  PRIMARY KEY (id)
+);
+INSERT INTO products (flavor, price, quantity)
+VALUES ("vanilla", 2.50, 100);
+INSERT INTO products (flavor, price, quantity)
+VALUES ("chocolate", 3.10, 120);
+INSERT INTO products (flavor, price, quantity)
+VALUES ("strawberry", 3.25, 75)</string>
+		<string>var connection = mysql.createConnection({
+  host: "localhost",
+  port: 3306,
+
+  // Your username
+  user: "root",
+
+  // Your password
+  password: "",
+  database: "ice_creamDB"
+})</string>
+		<string>CREATE TABLE products (
+  id INT NOT NULL AUTO_INCREMENT,
+  flavor VARCHAR(45) NULL,
+  price DECIMAL(10,2) NULL,
+  quantity INT NULL,
+  PRIMARY KEY (id)
+)</string>
+		<string>USE  favorite_db;
+INSERT INTO  favorite_foods (
+  `food`,
+  `score`
+)
+VALUES (
+  "Chocolate Almonds",
+  10
+);
+INSERT INTO favorite_songs (
+  song,
+  artist,
+  score
+)
+VALUES (
+	"Banana Pancakes",
+	"Jack Johnson",
+	10
+),(
+	"Better Together",
+	"Jack Johnson",
+	8
+	);
+INSERT INTO  favorite_movies (
+  `movie`,
+  `five_times`,
+   `score`
+)
+VALUES (
+  "Tropic Thunder",
+  false,
+   5
+);
+SELECT * FROM `favorite_movies`</string>
+		<string>SELECT * FROM `favorite_movies`</string>
+		<string>INSERT INTO  favorite_movies (
+  `movie`,
+  `five_times`,
+   `score`
+)
+VALUES (
+  "Forrest Gump",
+  false,
+   10
+),(
+	"Princess Bride",
+	false,
+	10
+)</string>
+		<string>INSERT INTO  favorite_foods (
+  `food`,
+  `score`
+)
+VALUES (
+  "tacos",
+  10
+)</string>
+		<string>SELECT * FROM `favorite_songs`</string>
+		<string>INSERT INTO favorite_songs (
+  song,
+  artist,
+  score
+)
+VALUES (
+	"Was He Slow",
+	"Some DJ",
+	5
+)</string>
+		<string>INSERT INTO favorite_songs (
+  song,
+  artist,
+  score
+);
+VALUES (
+	"Was He Slow",
+	"Some DJ",
+	5
+)</string>
+		<string>INSERT INTO favorite_songs (
+  song,
+  artist,
+  score
+);
+VALUES favorite_songs (
+	"Was He Slow",
+	"Some DJ",
+	5
+)</string>
+		<string>USE  favorite_db;
+INSERT INTO  favorite_foods (
+  `food`,
+  `score`
+);
+VALUES favorite_foods (
+  "tacos",
+  10
+)</string>
+		<string>INSERT INTO favorite_songs (
+  `song`,
+  `artist`,
+  `score`
+);
+VALUES favorite_songs (
+	"Was He Slow",
+	"Some DJ",
+	5
+)</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.21</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
