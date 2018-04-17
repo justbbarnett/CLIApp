@@ -65,7 +65,7 @@ function displayCatalog() {
 function lowProducts(){
     connection.query("SELECT * FROM products WHERE quantity <?", 50, function(err, res) {
         if (!res.length){
-            console.log("-------------- All products are stocked! --------------")
+            console.log("\n-------------- All products are stocked! --------------\n")
         }
         for (var i = 0; i < res.length; i++) {
             console.log("\t ID#: ".red.underline + res[i].id +
@@ -115,5 +115,39 @@ function addInventory (){
 };
 
 function addProduct (){
-
-};
+    inquirer.prompt([
+        {
+            name: "name",
+            message: "What kind of product would you like to add?"
+        },
+        {
+            name: "department",
+            message: "What department is it in?"
+        },
+        {
+            name: "price",
+            message: "How much does it cost?"
+        },
+        {
+            name: "quant",
+            message: "How many are you adding to inventory?"
+        }
+    ]).then( function (input){
+        connection.query( "INSERT INTO products SET ?",
+            {
+                product_name: input.name,
+                department_name: input.department,
+                price: input.price,
+                quantity: input.quant
+            }, function (err, res) {
+                if (err) throw err;
+                console.log("\n" + res.affectedRows + " product inserted!\n");
+                console.log("\t ID#: ".red.underline + "TBA" +
+                "   || Product: ".red.underline + input.name +
+                "   ||  Price: $".blue + input.price +
+                "   ||  Quantity: ".blue + input.quant  +"\n");
+                managerMenu();
+            }
+        );   
+    })
+}
