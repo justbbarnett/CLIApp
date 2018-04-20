@@ -115,14 +115,28 @@ function addInventory (){
 };
 
 function addProduct (){
+    connection.query("SELECT * FROM departments", function(err, res) {
+        if (err) throw err;
+        let departmentsArr = [];
+        console.log("Departments".red.underline.bold)
+        for (var i = 0; i < res.length; i++) {
+            console.log("\t ID#: ".red.underline + res[i].department_id +
+            "   || Department: ".red.underline + res[i].department_name)
+            departmentsArr.push(res[i].department_name)
+        }
+    
+        console.log(departmentsArr)
     inquirer.prompt([
         {
             name: "name",
             message: "What kind of product would you like to add?"
         },
         {
+            type: "list",
             name: "department",
-            message: "What department is it in?"
+            message: "What department is it in?",
+            choices: departmentsArr
+            
         },
         {
             name: "price",
@@ -149,5 +163,6 @@ function addProduct (){
                 managerMenu();
             }
         );   
+    })
     })
 }

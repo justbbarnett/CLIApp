@@ -43,7 +43,9 @@ function buyItem () {
             else {
                 connection.query("UPDATE products SET ? WHERE ?", [
                     {
-                        quantity: res[0].quantity - custInput.quant
+                        quantity: res[0].quantity - custInput.quant,
+                        product_sales: res[0].product_sales + 
+                            (custInput.quant * res[0].price)
                     },
                     {
                         id: custInput.ID
@@ -52,7 +54,7 @@ function buyItem () {
                 console.log("Your total is: $" + (custInput.quant * res[0].price))
                 console.log("\t ID#: ".red.underline + res[0].id +
                 "   || Product: ".red.underline + res[0].product_name +
-                "   ||  Price: $".blue + res[0].price +
+                "   ||   EA Price: $".blue + res[0].price +
                 "   ||  Quantity: ".blue + custInput.quant +"\n");
                 mainMenu();
             }
