@@ -1,12 +1,23 @@
+
 function bamazonManager () {
 
 var mysql = require("mysql");
-var connection = require("./bamazonDBconnect")
+// var connection = require("./bamazonDBconnect")
 var menu = require("./bamazon")
 var inquirer = require("inquirer");
 var colors = require('colors');
 
-
+var connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+  
+    // Your username
+    user: "root",
+  
+    // Your password
+    password: "",
+    database: "bamazonDB"
+  });
 
 connection.connect(function (err) {
     if (err) throw err;
@@ -48,8 +59,10 @@ function managerMenu () {
             break;
 
             case "Back to User Menu":
-                
+                // connection.end(); 
+                console.log (connection)
                 menu.bamazonMenu();
+                
             break;
 
             case "Exit":

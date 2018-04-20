@@ -18,7 +18,7 @@ function bamazonMenu () {
                 "Customer",
                 "Manager",
                 "Supervisor",
-                "Exit"
+                "Leave B-Amazon"
             ]
         }
     ]).then (function (input) {
@@ -32,11 +32,11 @@ function bamazonMenu () {
                 mgr.bamazonManager ();
             break;
 
-            case "Add to Inventory":
+            case "Supervisor":
                 spr.bamazonSuper();
             break;
 
-            case "Exit":
+            case "Leave B-Amazon":
             console.log("\n ******************** Thank you for being loyal to B - Amazon! ********************\n")
             return;
             break;
