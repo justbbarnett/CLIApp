@@ -1,7 +1,12 @@
+function bamazonManager () {
+
 var mysql = require("mysql");
 var connection = require("./bamazonDBconnect")
+var menu = require("./bamazon")
 var inquirer = require("inquirer");
 var colors = require('colors');
+
+
 
 connection.connect(function (err) {
     if (err) throw err;
@@ -20,6 +25,7 @@ function managerMenu () {
                 "View Low Inventory",
                 "Add to Inventory",
                 "Add New Product",
+                "Back to User Menu",
                 "Exit"
             ]
         }
@@ -39,6 +45,11 @@ function managerMenu () {
 
             case "Add New Product":
                 addProduct();
+            break;
+
+            case "Back to User Menu":
+                
+                menu.bamazonMenu();
             break;
 
             case "Exit":
@@ -166,3 +177,6 @@ function addProduct (){
     })
     })
 }
+}
+
+module.exports.bamazonManager = bamazonManager;
