@@ -49,7 +49,7 @@ function customerMenu() {
 
             case "Back to User Menu":
                 connection.end(); 
-                console.log (connection)
+                
                 menu.bamazonMenu(); 
             break;
 

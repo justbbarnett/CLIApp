@@ -59,8 +59,7 @@ function managerMenu () {
             break;
 
             case "Back to User Menu":
-                // connection.end(); 
-                console.log (connection)
+                connection.end(); 
                 menu.bamazonMenu();
                 
             break;
